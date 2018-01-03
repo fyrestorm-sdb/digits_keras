@@ -76,6 +76,9 @@ model_perc = perceptrons(vector_size)
 model_perc.fit(xtrain,ytrain,batch_size=200, nb_epoch=10, verbose=1)
 # loss: 0.0108 - acc: 0.9985
 
+#voir les predictions
+model_perc.predict(xtest, verbose=0)
+
 score = model_perc.evaluate(xtest, ytest, verbose=1)
 #[0.084462631291830209, 0.9754421768707483]
 #2.45578231293 % error
